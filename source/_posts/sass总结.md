@@ -1,7 +1,7 @@
 ---
 title: sass总结
 date: 2017-02-15 21:32:03
-tags: sass
+tags: [sass,css]
 categories: work
 ---
 

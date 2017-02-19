@@ -3,6 +3,7 @@ title: gitHub Pages + Hexo搭建博客
 date: 2017-02-15 2:02:22
 tags: [GitHub, Hexo]
 categories: work
+comments: true
 ---
 
 ## 写在前面
