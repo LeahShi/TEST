@@ -17,7 +17,7 @@ categories: work
 //step 1 ：将修改的文件部署至网站
 $ hexo g -d
 //step 2 : 将源码托管至GitHub
-$ status → $ add . → $ commit -m "modify" → $ push
+$ git status → $ git add . → $ git commit -m "modify" → $ git push
 //step 3 : 换电脑后更新远程代码到本地仓库
 $ git remote -v                     //查看远程仓库
 $ git fetch origin master           //从远程获取最新版本到本地
