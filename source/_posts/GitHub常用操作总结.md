@@ -87,3 +87,9 @@ $ git reset --hard 3628164（第二版本commit id，可在git log中查到）
 - 第一步相同，新建仓库
 - 按照空的新项目，GitHub给出的命令行依次执行
 本地项目推送至GitHub就拥有分布式版本库。
+
+## 更新远程代码到本地仓库
+- 查看远程仓库`$ git remote -v`
+- 从远程获取最新版本到本地`$ git fetch origin master`
+- 比较本地的仓库和远程参考的区别`$ git log -p master.. origin/master
+- 把远程下载下来的代码合并到本地仓库，远程的和本地的合并`$ git merge origin/master`
