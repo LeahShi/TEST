@@ -4,7 +4,9 @@ date: 2017-02-15 21:32:03
 tags: [sass,css]
 categories: work
 ---
+![sass slogan](/images/sass_slogan.png)
 
+<!-- more -->
 ## 写在前面
 去年用了一些新东西，自后会相继更新几篇文章总结回顾，这是一篇有关sass的总结。
 
