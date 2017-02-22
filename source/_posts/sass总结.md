@@ -46,10 +46,10 @@ sass input.scss output.css    //编译成.css文件
 sass input.scss             //在命令行中输出css格式代码
 
 3.编译成css的四种风格：
-nested  （正常有缩进有嵌套的css文件）
-expanded（没有缩进的、扩展的css代码。）
-compact（简洁格式的css代码。）
-compressed  （压缩后的css代码。）
+nested  （缩进、嵌套）
+expanded（扩展）
+compact（简洁）
+compressed  （压缩）
 
 　sass --style compressed test.sass test.css
 　
