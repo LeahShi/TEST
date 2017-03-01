@@ -133,7 +133,9 @@ categories:XXX
 ```
 hexo g -d
 ```
-
+### 草稿【相当于私密内容】
+1、新建草稿`hexo new draft "new draft"`
+2、把草稿变成文章`hexo publish [layout] <filename>`
 ### [Hexo主题配置](https://hexo.io/zh-cn/docs/configuration.html)
 
 ### 绑定个性域名地址
