@@ -9,7 +9,7 @@ categories: work
 <!-- more -->
 
 > 在过去一年中可能GitHub接触的相对较多，不过也仅限于在上线download一些demo。
-公司里面一直用的svn，所以对于git了解甚少。此次搭建个站接触到了git，借此发文总结。
+> 公司里面一直用的svn，所以对于git了解甚少。此次搭建个站接触到了git，借此发文总结。
 
 ## Git介绍
 ### Git和SVN
