@@ -1,0 +1,40 @@
+---
+title: d3.js学习笔记（二）
+date: 2017-03-03 11:45:41
+tags: [d3,js,数据可视化]
+categories: work
+---
+
+[接上篇](https://leahshi.github.io/2017/03/01/d3.js学习笔记（一）/#more)
+静态展示数据是无法体现d3的强大之处的，今天学习了d3的一些动画和事件交互方面，很强大、
+
+<!-- more -->
+
+## d3的动画效果
+d3动画和CSS3动画类似，d3提供一下四种方法，将图形从一种状态变为另一种状态。
+- transition()  启动过渡
+- duration()    过渡持续时间，ms为单位
+- ease()        过渡方式
+    - inear：普通的线性变化
+    - circle：慢慢地到达变换的最终状态
+    - elastic：带有弹跳的到达最终状态
+    - bounce：在最终状态处弹跳几次
+- delay()       延迟动画，ms为单位
+```
+//起始状态 圆心在[50px,50px].半径为50的红色小圆
+ var circle = svg.append("circle").attr("cx",50).attr("cy",400).attr("r",50).attr("fill","red");
+ circle.transition().duration(3000).delay(50).ease("bounce").attr("cx",400).attr("r",100).attr("fill","yellow");
+```
+以上cx、cy、r等是svg圆形形状的属性，更多svg形状属性[戳这里](http://www.w3school.com.cn/svg/index.asp)
+
+## d3事件绑定
+和在jQuery中相同，d3为选择集绑定事件用到on()函数，常见事件有click、dblclick、mouseover、mouseout、mousemove、mousedown、mouseup、keydown、keyup、keypress、touchstart、touchend、touchmove
+```
+//为上述例子中圆形绑定事件
+circle.on("click",function(){});
+```
+## update()、enter()和exit()区别
+简单来说，三种方法用于数组和选择集对应关系。
+- update() 绑定数据数量个数 = 选择集刚好对应的部分    更新属性值
+- enter()  绑定数据数量个数 > 选择集刚好对应的部分    通常后面接append()添加元素后，赋予属性值
+- exit()   绑定数据数量个数 < 选择集刚好对应的部分    remove()删除元素后，赋予属性值
