@@ -1,6 +1,6 @@
 ---
 title: 远程真机调试 - weinre
-date: 2017-02-27 10:26:24
+date: 2016-05-27 10:26:24
 tags: [debug,移动端]
 categories: work
 ---

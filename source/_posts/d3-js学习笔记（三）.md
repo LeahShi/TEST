@@ -1,0 +1,98 @@
+---
+title: d3.js学习笔记（三） — 布局
+date: 2017-02-16 10:23:59
+tags: [d3,js,数据可视化]
+categories: work
+---
+
+从第三部分起将学习到d3的核心部分——layout，D3总共提供了12种布局方式：
+饼状图（Pie）、力导向图（Force）、弦图（Chord）、集群图（Cluster）、树状图（Tree）、打包图（Pack）、捆图（Bundle）、堆栈图（Stack）、矩阵树图（Treemap）、直方图（Histogram）、分区图（Partition）、层级图（Hierarchy）。
+
+<!-- more -->
+
+所有的布局图形基本上都是三步走：数据及数据转化、图形生成、添加图形元素。
+
+## 饼状图d3.layout.pie()
+```
+//创建画布
+var width = 555,height = 555;
+var svg = d3.select("body").append("svg").attr({"width":width,"height":height});
+
+//数据
+var dataset = [55,33,44,46,57,25];
+
+//olor 是一个颜色比例尺，它能根据传入的索引号获取相应的颜色值；也可以自定义一个数组添加自己想要的颜色
+var color = d3.scale.category10();
+
+//定义pie，得到piedata
+var pie = d3.layout.pie();
+var piedata = pie(dataset);
+//5 个整数被转换成了 5 个对象（Object） ，每个对象都有变量起始角度（startAngle）和终止角度（endAngle），还有原数据（属性名称为 data）
+console.log(piedata);
+
+//图形生成器
+var outerRadius = 150;
+var innerRadius = 0;
+var arc = d3.svg.arc().innerRadius(innerRadius).outerRadius(outerRadius);
+
+//添加图形元素
+var arcs = svg.selectAll("g").data(piedata).enter().append("g").attr("transform","translate("+ (width/2) +","+ (width/2) +")");
+arcs.append("path").attr("fill",function(d,i){return color(i)}).attr("d",function(d){return arc(d)}).on("mouseover",function(d){console.log(d.data)});//调用弧生成器，得到路径值
+//添加文字
+//arc.centroid(d) 能算出弧线的中心 ，text() 里返回的是 d.data ，而不是 d 。因为被绑定的数据是对象，里面有 d.startAngle、d.endAngle、d.data 等，其中 d.data 才是转换前的整数的值
+arcs.append("text").attr("transform",function(d){return "translate(" + arc.centroid(d) + ")";}).attr("text-anchor","middle").text(function(d){return d.data;})
+```
+
+
+## 力导向图d3.layout.force()
+//创建画布
+var width = 555,height = 555;
+var svg = d3.select("body").append("svg").attr({"width":width,"height":height});
+//颜色
+var color = d3.scale.category20();
+//数据
+var nodes = [ { name: "桂林" }, { name: "广州" },
+    { name: "厦门" }, { name: "杭州" },
+    { name: "上海" }, { name: "青岛" },
+    { name: "天津" } ];
+//小球和线之间连接关系是靠以下数组关联。source为连接体，target为被连接的对象 数字为在nodes下的索引值
+var edges = [ { source : 0 , target: 1 } , { source : 0 , target: 2 } ,
+    { source : 0 , target: 3 } , { source : 1 , target: 4 } ,
+    { source : 1 , target: 5 } , { source : 1 , target: 6 } ];
+
+//转换数据
+var force = d3.layout.force()
+        .nodes(nodes)           //节点数组
+        .links(edges)           //连线
+        .size([width,height])   //作用域范围
+        .linkDistance(150)      //连线长度
+        .charge([-400]);        //相互之间的作用力
+force.start();  //开始作用
+
+console.log(nodes);
+console.log(edges);
+
+//绘图
+//添加连线
+var svg_edges = svg.selectAll("line").data(edges).enter().append("line").style("stroke","#ccc").style("stroke-width",1);
+//添加小圆
+var svg_nodes = svg.selectAll("circle").data(nodes).enter().append("circle").attr("r",20).style("fill",function(d,i){return color(i)}).call(force.drag);
+//文字
+var svg_texts = svg.selectAll("text").data(nodes).enter().append("text").style("fill","black").attr("dx", 20).attr("dy", 8).text(function(d){return d.name});
+//不断更新节点和连线的位置
+force.on("tick", function(){	//对于每一个时间间隔
+
+    //更新连线坐标
+    svg_edges.attr("x1",function(d){ return d.source.x; })
+            .attr("y1",function(d){ return d.source.y; })
+            .attr("x2",function(d){ return d.target.x; })
+            .attr("y2",function(d){ return d.target.y; });
+
+    //更新节点坐标
+    svg_nodes.attr("cx",function(d){ return d.x; })
+            .attr("cy",function(d){ return d.y; });
+
+    //更新文字坐标
+    svg_texts.attr("x", function(d){ return d.x; })
+            .attr("y", function(d){ return d.y; });
+});
