@@ -8,6 +8,9 @@ categories: work
 - letter-spacing字间距属性用于定义字间距，所谓字间距就是字符与字符之间的空白。其属性值可为不同单位的数值，允许使用负值，默认为normal。
 
 - word-spacing单词间距属性用于定义英文单词之间的间距，对中文字符无效。和letter-spacing一样，其属性值可为不同单位的数值，允许使用负值，默认为normal。
+
+<!-- more -->
+
 word-spacing和letter-spacing均可对英文进行设置。不同的是letter-spacing定义的为字母之间的间距，而word-spacing定义的为英文单词之间的间距。
 
 - text-decoration文本装饰，none：没有装饰（正常文本默认值）、underline：下划线、overline：上划线、line-through：删除线。
