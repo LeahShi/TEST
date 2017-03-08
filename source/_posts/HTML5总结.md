@@ -67,8 +67,10 @@ svg即：Scalable Vector Graphics 可缩放矢量图形；体积小，质量高�
 ### 新增属性：
 1、自定义属性:（data-x）【重要】
 通过DOM存储与DOM对象强相关的数据。
+
 2、智能表单：【手机端可以使用、pc端有很多兼容性问题】
 新表单类型（number、email、date、range、search、tel、color等）；在webapp中应用较多；原生的应用，在浏览器中会有很多兼容性问题。
+
 3、链接关系描述：（用来描述指定链接与当前文档的关系，便于机器理解文档结构）
 常见链接关系表：
 - stylesheet    文档的外部样式表；（常见）
@@ -81,6 +83,7 @@ svg即：Scalable Vector Graphics 可缩放矢量图形；体积小，质量高�
 - appendix    文档附录            help    帮助文档
 - licence    一般用于文献，表示许可证的含义
 - tag    标签集合        friend    友情链接
+
 4、结构数据标记:(很高级的东西，只有Google支持)
 ```
 <div itemscope itemtype="http://example.com/hello">
