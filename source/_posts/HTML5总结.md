@@ -53,7 +53,6 @@ svg即：Scalable Vector Graphics 可缩放矢量图形；体积小，质量高�
 <embed src="demo.svg">
 
 //d.Ajax方式加载(自定义样式) 【最推荐使用】
-```
 <svg data-src="demo.svg"></svg>
 <script>
   window.addEventListener('load',function(){
