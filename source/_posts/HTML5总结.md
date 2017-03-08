@@ -85,11 +85,11 @@ svg即：Scalable Vector Graphics 可缩放矢量图形；体积小，质量高�
 4、结构数据标记:(很高级的东西，只有Google支持)
 ```
 <div itemscope itemtype="http://example.com/hello">
-  <p>我叫<span itemprop="主人">汪磊</span>。</p>
+  <p>我叫<span itemprop="老板">aaa</span>。</p>
   <p>
-    我养了一条叫
-    <span itemprop="狗名">旺财</span>的
-    <span itemprop="品种">金毛</span>犬。
+    我y有个员工叫
+    <span itemprop="员工">bbb</span>
+    性别<span itemprop="性别">男</span>。
   </p>
 </div>
 ```
