@@ -1,7 +1,7 @@
 ---
 title: sass总结
 date: 2016-03-15 21:32:03
-tags: [sass,css]
+tags: [Sass,CSS]
 categories: work
 ---
 ![sass slogan](/images/sass_slogan.png)

@@ -1,7 +1,7 @@
 ---
 title: Git和GitHub总结
 date: 2016-04-09 21:06:17
-tags: [Hexo,NexT,stylus]
+tags: [Hexo,NexT,Stylus]
 categories: work
 ---
 ![GitHub slogan](/images/github_banner.jpg)

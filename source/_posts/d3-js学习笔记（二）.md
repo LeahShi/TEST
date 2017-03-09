@@ -1,7 +1,7 @@
 ---
 title: d3.js学习笔记（二） — 交互效果
 date: 2017-02-13 11:45:41
-tags: [d3,js,数据可视化]
+tags: [D3,JS,数据可视化]
 categories: work
 ---
 

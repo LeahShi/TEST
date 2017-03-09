@@ -1,7 +1,7 @@
 ---
 title: compass总结
 date: 2016-03-29 11:25:34
-tags: [compass,sass,css]
+tags: [Compass,Sass,CSS]
 categories: work
 ---
 

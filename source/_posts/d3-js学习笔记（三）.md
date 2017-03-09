@@ -1,7 +1,7 @@
 ---
 title: d3.js学习笔记（三） — 布局
 date: 2017-02-16 10:23:59
-tags: [d3,js,数据可视化]
+tags: [D3,JS,数据可视化]
 categories: work
 ---
 
