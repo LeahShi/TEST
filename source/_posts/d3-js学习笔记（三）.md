@@ -45,6 +45,7 @@ arcs.append("text").attr("transform",function(d){return "translate(" + arc.centr
 
 
 ## 力导向图d3.layout.force()
+```
 //创建画布
 var width = 555,height = 555;
 var svg = d3.select("body").append("svg").attr({"width":width,"height":height});
@@ -81,7 +82,6 @@ var svg_nodes = svg.selectAll("circle").data(nodes).enter().append("circle").att
 var svg_texts = svg.selectAll("text").data(nodes).enter().append("text").style("fill","black").attr("dx", 20).attr("dy", 8).text(function(d){return d.name});
 //不断更新节点和连线的位置
 force.on("tick", function(){	//对于每一个时间间隔
-
     //更新连线坐标
     svg_edges.attr("x1",function(d){ return d.source.x; })
             .attr("y1",function(d){ return d.source.y; })
@@ -96,3 +96,4 @@ force.on("tick", function(){	//对于每一个时间间隔
     svg_texts.attr("x", function(d){ return d.x; })
             .attr("y", function(d){ return d.y; });
 });
+```
