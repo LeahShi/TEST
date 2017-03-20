@@ -1,0 +1,176 @@
+---
+title: d3.js学习笔记（五） — 布局
+date: 2017-03-20 16:15:33
+tags: [D3,JS,数据可视化]
+categories: work
+---
+接上篇。
+
+## 打包图d3.layout.pack()
+打包图用于表示包含与被包含的关系，也可表示各对象的权重，通常用一圆套一圆来表示前者，用圆的大小来表示后者。
+### 数据格式
+与集群图一样为一个json对象。
+
+<!-- more -->
+![](/images/d3_pack.jpg)
+### demo及分析
+```
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script>
+	    var width = 500,height = 500;
+	    var svg = d3.select("body").append("svg").attr({"width":width,"height":height}).append("g").attr("transform","translate(0,0)");
+
+	    //数据及数据转换
+	    //打包图布局，限定范围，最小圆的半径
+	    var pack = d3.layout.pack()
+	    				.size([width,height])
+	    				.radius(30);
+
+	    d3.json("city.json",function(error,data){
+	    	var nodes = pack.nodes(data);
+	    	var links = pack.links(nodes);
+
+	    	console.log(nodes);
+	    	console.log(links);
+
+	    	svg.selectAll("circle")
+				.data(nodes)
+				.enter()
+				.append("circle")
+				.attr({"fill":"blue","fill-opacity":"0.4"})
+				//设定每个元素所在圆的圆心坐标、半径
+				.attr("cx",function(d){
+					return d.x;
+				})
+				.attr("cy",function(d){
+					return d.y;
+				})
+				.attr("r",function(d){
+					return d.r;
+				})
+				//鼠标hover事件
+				.on("mouseover",function(d,i){
+					d3.select(this)
+						.attr("fill","yellow");
+				})
+				.on("mouseout",function(d,i){
+					d3.select(this)
+						.attr("fill","rgb(31, 119, 180)");
+				});
+
+			//文字 x、y、dx、dy – 文本 x，y 坐标、x 、y轴方向的文本平移量
+			svg.selectAll("text")
+				.data(nodes)
+				.enter()
+				.append("text")
+				.attr("font-size","10px")
+				.attr("fill","white")
+				.attr("fill-opacity",function(d){
+					  if(d.depth == 2)
+						  return "0.9";
+					  else
+						  return "0";
+				})
+				.attr("x",function(d){ return d.x; })
+				.attr("y",function(d){ return d.y; })
+				.attr("dx",-12)
+				.attr("dy",1)
+				.text(function(d){ return d.name; });
+
+	    })
+
+    </script>
+    </body>
+</html>
+```
+以上很多方法在集群图已做详细分析，不再赘述。
+
+
+## 地图的制作
+![](/images/d3_map.jpg)
+### 数据格式
+将 JSON 的格式应用于地理上的文件，叫做 GeoJSON 文件。GeoJSON 文件中的地图数据，都是经度和纬度的信息。它们都是三维的。
+制作GeoJSON文件很复杂。网上有传送门，将一些常用的地图数据整理好。
+- [世界地图和主要国家](http://www.ourd3js.com/wordpress/668/)
+- [中国省市级](http://www.ourd3js.com/wordpress/638/)
+- [中国县级](http://www.ourd3js.com/wordpress/739/)
+### demo及分析
+```
+<html>
+  <head>
+        <meta charset="utf-8">
+        <title>中国地图</title>
+  </head>
+<style>
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+	//创建画布
+    var width = 1000,height = 1000;
+    var svg = d3.select("body").append("svg").attr({"width":width,"height":height}).append("g").attr("transform","translate(0,0)");
+
+    //由于GeoJSON文件返回的经纬度是三维，网页是二维的。
+    //所以要使用 d3.geo.mercator() 的投影方式，设定一个投影函数来转换经度纬度。
+	var projection = d3.geo.mercator()
+					//center() 设定地图的中心位置，[104,29] 指的是经度和纬度。
+					//中国的经纬度范围大约为：经度73.66~135.05，纬度3.86~53.55
+					.center([104, 29])
+					//scale() 设定放大的比例。自己调整合适比例
+					.scale(600)
+					//translate() 设定平移 居中显示
+					.translate([width/2, height/2]);
+
+	//地理路径生成器d3.geo.path()
+	var path = d3.geo.path()
+	//projection() 是设定生成器的投影函数
+				 .projection(projection);
+
+	var color = d3.scale.category20();
+
+
+	d3.json("china.geojson", function(error, data) {
+
+		if (error)
+			return console.error(error);
+		console.log(data.features);
+
+		svg.selectAll("path")
+			.data( data.features )
+			.enter()
+			.append("path")
+			.attr("stroke","#000")
+			.attr("stroke-width",1)
+			.attr("fill", function(d,i){
+				return color(i);
+			})
+			.attr("d", path )
+			.on("mouseover",function(d,i){
+                d3.select(this)
+                    .attr("fill","yellow");
+            })
+            .on("mouseout",function(d,i){
+                d3.select(this)
+                    .attr("fill",color(i));
+            });
+
+	});
+
+</script>
+
+</body>
+</html>
+```
+
+
+
+d3.js 系列学习笔记完。 全部demo上传至[GitHub地址](https://github.com/LeahShi/D3.js-learning-master)
+
+今后在工作中踩坑后再开篇总结。
