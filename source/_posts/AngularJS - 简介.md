@@ -1,7 +1,7 @@
 ---
-title: Angular项目实战之简介
+title: AngularJS - 简介
 date: 2016-10-12 14:53:20
-tags: [AngularJS、JS]
+tags: [AngularJS,JS]
 categories: work
 ---
 
@@ -34,10 +34,10 @@ AngularJS是一种MVC（Model-View-Controller）框架，主要用来构建单�
 - 路由（route）
 - 数据绑定
     - 表达式 —— 花括号赋值
-    - 作用域（$scope）
-    - 指令（ng-系列）
-    - 事件
+    - 作用域（$scope） 
 - 数据请求通信
+- 事件类型
+- 指令（directives）
 - 模块（module）
     - 依赖注入
 - 控制器（controller）
