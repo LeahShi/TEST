@@ -8,6 +8,7 @@ categories: work
 ## Module介绍
 每一个Angular应用都应该声明一个或多个module，通常一个应用视为一个Module即可。SPA应用的首页中引入所有的资源，DOM结构中放置一个div，给其绑定ng-app。在通过路由，实现页面嵌套。在HTML中用`ng-app`绑定某个模块的父节点上。
 
+<!-- more -->
 
 ## 使用语法
 ```
