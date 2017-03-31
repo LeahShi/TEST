@@ -1,6 +1,6 @@
 ---
-title: AngularJS - 模块（app.module）.md
-date: 2016-10-20 15:32:18
+title: AngularJS - 模块（app.module）
+date: 2016-09-20 23:53:20
 tags: [AngularJS,JS]
 categories: work
 ---
@@ -16,6 +16,12 @@ angular.module(name, [requires]);
 ```
 - 【name】为一个字符串，值为页面中`ng-app="myApp"` 中的值（myApp）
 - 【requires】为一个数组，在module声明的时候，后面带一个数组，这个数组里面可以指定它所依赖的module，以供该模块使用。如果没有要依赖的模块可以为空`angular.module(name, []);` 
+
+angular.module('name', [])和angular.module('name') 虽然看起来很相似，但是含义却是不同的。
+前者是创建一个新的module，[]表示它没有依赖任何其他模块，如果已经有了一个同名模块，则会覆盖现有的（参照项目根目录中app.module.js文件）；
+而后者是查找一个现有module，如果这个module不存在，则返回空值（参照项目各个模块的controller、state、service、js文件）。
+如果把前者误用为后者，那么在它的返回值上调用controller等函数会出现空指针错误；
+如果把后者误用为前者，则会导致那些依赖注入的module丢掉。
 
 ## `angular.module('myModule',[]).`后面常用的方法
 一下方法每一个都可以作为一个专题来记述，此篇不祥述。只做简单陈述和列举
