@@ -11,10 +11,10 @@ keywords: "石璐,blog,LeahShi"
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss: 
+rss:
 
 # Specify the date when the site was setup
-since: 2016
+#since: 2015
 
 # icon between year and author @Footer
 authoricon: heart
@@ -134,9 +134,7 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-social:
-  GitHub: https://github.com/LeahShi
-  Twitter: https://twitter.com/shilukl  
+# social:
   #LinkLabel: Link
 
 
@@ -151,7 +149,7 @@ social_icons:
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
   Twitter: twitter
- # Weibo: weibo
+  Weibo: weibo
 
 
 # Sidebar Avatar
@@ -192,11 +190,11 @@ sidebar:
 
 
 # Blogrolls
-links_title: Links
+#links_title: Links
 #links_layout: block
-links_layout: inline
-links:
-  库大神: http://bbswo.com/
+#links_layout: inline
+#links:
+  #Title: http://example.com/
 
 
 # ---------------------------------------------------------------
@@ -309,12 +307,12 @@ search:
 ##  type: button
 
 # Share
-#jiathis: true
+#jiathis:
 # Warning: JiaThis does not support https.
 #add_this_id:
 
 # Share
-duoshuo_share: true
+#duoshuo_share: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
@@ -450,7 +448,7 @@ use_motion: true
 fancybox: true
 
 # Canvas-nest
-canvas_nest: true
+canvas_nest: false
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
@@ -517,6 +515,6 @@ version: 5.1.0
 duoshuo_shortname: leahshi
 
 # reward
- reward_comment: Test~~
- wechatpay: /images/wechat.jpg
- alipay: /images/alipay.jpg
+reward_comment: 拿红包来砸我把~~
+wechatpay: /images/wechat.jpg
+alipay: /images/alipay.jpg
