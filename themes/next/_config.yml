@@ -515,6 +515,6 @@ version: 5.1.0
 duoshuo_shortname: leahshi
 
 # reward
-reward_comment: 拿红包来砸我把~~
-wechatpay: /images/wechat.jpg
-alipay: /images/alipay.jpg
+# reward_comment: 拿红包来砸我把~~
+# wechatpay: /images/wechat.jpg
+# alipay: /images/alipay.jpg
