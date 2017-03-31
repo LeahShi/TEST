@@ -1,5 +1,5 @@
 ---
-title: AngularJS - 模块（app.module）
+title: AngularJS - 模块
 date: 2016-09-20 23:53:20
 tags: [AngularJS,JS]
 categories: work
