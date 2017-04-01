@@ -36,13 +36,11 @@ seo: false
 
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
-  home: /
-  #categories: /categories  #分类页
-  #about: /about
-  archives: /archives      #归档
+  home: / 
+  archives: /archives       #归档
   tags: /tags
-  categories: /categories  #分类
-  #resume: /resume #关于我
+  categories: /categories   #分类
+  #resume: /resume          #简历
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -56,7 +54,7 @@ menu_icons:
   enable: true
   #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
-  about: user
+  resume: user
   categories: th
   schedule: calendar
   tags: tags
@@ -299,14 +297,14 @@ search:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere_uid: MTAyMC8yNzk5My80NTcw
 
 # Baidu Share
 # Available value:
 #    button | slide
 # Warning: Baidu Share does not support https.
-#baidushare:
-##  type: button
+baidushare:
+  type: button
 
 # Share
 #jiathis:
@@ -314,7 +312,7 @@ search:
 #add_this_id:
 
 # Share
-duoshuo_share: true
+duoshuo_share: false
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
@@ -338,7 +336,7 @@ duoshuo_share: true
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
-  ua_enable: true
+  ua_enable: false
   admin_enable: false
   user_id: 0
   #admin_nickname: Author
@@ -357,7 +355,7 @@ facebook_sdk:
 # This plugin depends on Facebook SDK.
 # If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
 facebook_comments_plugin:
-  enable: false
+  enable: true
   num_of_posts: 10  # min posts num is 1
   width: 100%       # default width is 550px
   scheme: light     # default scheme is light (light or dark)
@@ -514,7 +512,7 @@ images: images
 version: 5.1.0
 
 # comment
-duoshuo_shortname: leahshi
+#duoshuo_shortname: leahshi
 
 # reward
 reward_comment: 拿红包来砸我把~~
