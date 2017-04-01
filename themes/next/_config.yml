@@ -305,8 +305,8 @@ search:
 # Available value:
 #    button | slide
 # Warning: Baidu Share does not support https.
-baidushare:
-  type: button
+#baidushare:
+##  type: button
 
 # Share
 #jiathis:
@@ -314,7 +314,7 @@ baidushare:
 #add_this_id:
 
 # Share
-#duoshuo_share: true
+duoshuo_share: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
