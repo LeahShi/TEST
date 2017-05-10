@@ -16,7 +16,7 @@ Flex布局自2009年提出，就一直受到关注。它可以简单、完整、
 交叉轴的开始位置叫做cross start，结束位置叫做cross end。
 
 ## 一、Flex container 的相关属性：
-- flex-direction: row | row-reverse | column | column-reverse;  决定主轴是水平方向还是垂直方向
+- **flex-direction**: row | row-reverse | column | column-reverse;  决定主轴是水平方向还是垂直方向
 - **flex-wrap**: nowrap （不换行）| wrap（换行） | wrap-reverse（反向换行）; 定义如果一条轴线排不下，如何换行。默认为不换行
 - **justify-content**: flex-start | flex-end | center | space-between（两端对齐） | space-around（四周都有间距）;定义了项目在主轴上的对齐方式，不改变主轴的指定下，默认是水平方向
 - **align-items**: flex-start（交叉轴的起点对齐） | flex-end | center | baseline （项目的第一行文字的基线对齐。）| stretch（默认值：如果项目未设置高度或设为auto，将占满整个容器的高度。）;定义了项目在交叉轴上的对齐方式，不改变主轴的指定下，默认是垂直方向
