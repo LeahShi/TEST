@@ -69,6 +69,12 @@ ssh -T git@github.com
 Hi username! You've successfully authenticated, but GitHub does not
 provide shell access.
 ```
+#### 4、 解决push到github时，每次都要输入用户名和密码的问题
+在添加远程库的时候使用了https的方式。。所以每次都要用https的方式push到远程库，速度还慢。依次执行以下命令：
+- git remote -v
+- git remote rm origin
+- git remote add origin git@github.com:username/repository.git（地址需要自己改变）
+- git push -u origin master
 - - -
 
 ### 安装Hexo及本地建站
