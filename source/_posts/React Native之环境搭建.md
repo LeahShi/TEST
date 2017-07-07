@@ -14,6 +14,7 @@ comments: true
 由于博主有有windows系统电脑，下面主要介绍在windows下搭建React Native开发环境填的坑...
 
 <!-- more -->
+
 ## 一、依次安装以下环境：
 1、安装Java：
     假如电脑跑起来过项目的话，java环境肯定是有的，可以执行java -version命令来检测
@@ -52,11 +53,12 @@ Genymotion官网地址：http://www.genymotion.net/
 可以自己在网上下，也可附上百度云下载地址：http://pan.baidu.com/s/1pKH8BnP
 注意：
 - Genymotion对私人开发者免费开源，注册即可（登录需要填写用户名、密码）。对公账户需要收费。
-- 双击安装Genymotion会连带安装Oracle VM VirtualBox，要将VirtualBox升级最新版本，（使用360即可），不然会出现意想不到的问题，错误稍后会以专题总结。
+- 双击安装Genymotion会连带安装Oracle VM VirtualBox，要将VirtualBox升级最新版本，（使用360即可），不然会报错，（unable to start the virtual device.VirtualBox cannot start the virtual device）
+错误稍后会以专题总结。
 
 ## 四、启动项目：
-1、进入项目目录，执行react-native start命令，耐心等待。访问http://localhost:8081/index.android.bundle?platform=android，如果可以访问表示服务器端跑起来了。
-2、启动Genymotion，或者用数据线连接安卓机真机调试，再另启命令行，输入react-native run-android，时间很长，耐心等待。
+1、进入项目目录，执行**react-native start**命令，耐心等待。访问http://localhost:8081/index.android.bundle?platform=android，如果可以访问表示服务器端跑起来了。
+2、启动Genymotion，或者用数据线连接安卓机真机调试，再另启命令行，输入**react-native run-android**，时间很长，耐心等待。
 3、第一次启动会报错，`can't find variable:.....`  解决方法：在模拟器调试状态下按下ctrl+M，（真机调试下摇一摇）调出弹窗，
 点击Dev Settings → Debug server host & port for device(设置本机的ip和端口固定8081) → 再次ctrl+M(摇一摇),选择Reload JS
 （因为RN报错，很多错误无从找起，稍后会用另起一篇专门总结RN中常见错误）
