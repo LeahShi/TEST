@@ -13,6 +13,7 @@ comments: true
 第一篇来介绍下如何搭建React Native开发环境。搭建环境有相应的几种平台，在Windows下只能 run-android，在Mac OS X系统可一运行ios&&android双平台。
 由于博主有有windows系统电脑，下面主要介绍在windows下搭建React Native开发环境填的坑...
 
+<!-- more -->
 ## 一、依次安装以下环境：
 1、安装Java：
     假如电脑跑起来过项目的话，java环境肯定是有的，可以执行java -version命令来检测
@@ -60,7 +61,7 @@ Genymotion官网地址：http://www.genymotion.net/
 点击Dev Settings → Debug server host & port for device(设置本机的ip和端口固定8081) → 再次ctrl+M(摇一摇),选择Reload JS
 （因为RN报错，很多错误无从找起，稍后会用另起一篇专门总结RN中常见错误）
 4、Welcome to React Native！ 当看到这样的字时，恭喜你环境搭建好了，可以下一步熟悉相关api了。
-
+5、之后启动项目直接运行react-native run-android 即可，start命令可以省略，倘若要安装第三方插件时，需要关掉再重启。
 
 
 ## 相关学习资源
