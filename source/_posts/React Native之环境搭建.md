@@ -1,7 +1,7 @@
 ---
 title: React Native之环境搭建
-date: 2017-06-15 2:02:22
-tags: [React Native, 跨平台，移动端]
+date: 2017-06-19 2:02:22
+tags: [React Native,跨平台,移动端]
 categories: work
 comments: true
 ---
@@ -21,17 +21,17 @@ comments: true
 
 2、安装SDK：
     SDK下载地址：http://tools.android-studio.org/index.php/sdk/
-    - 设置系统环境变量菜单：控制面板\系统和安全\系统\高级系统设置\环境变量 （window10下）
-    - 设置环境变量ANDROID_HOME：Android SDK Manager的位置 例如：（ANDROID_HOME=> E:\Android\sdk）
-    - 设置环境变量PATH 例如：（PATH=> %ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools）
+- 设置系统环境变量菜单：控制面板\系统和安全\系统\高级系统设置\环境变量 （window10下）
+- 设置环境变量ANDROID_HOME：Android SDK Manager的位置 例如：（ANDROID_HOME=> E:\Android\sdk）
+- 设置环境变量PATH 例如：（PATH=> %ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools）
 
 3、下载SDK相关：(重要，不要漏掉任何一项)
 ![](/images/sdk_install.png)
-    - 打开Android SDK Manager。
-    - 选中Android SDK Build-tools version 23.0.1  （其他版本可能会出错）
-    - Android 6.0 (API 23)  （注意安装Genymotion时要注意模拟器版本不能太低）
-    - Android Support Repository
-    - Local Maven repository for Support Libraries
+- 打开Android SDK Manager。
+- 选中Android SDK Build-tools version 23.0.1  （其他版本可能会出错）
+- Android 6.0 (API 23)  （注意安装Genymotion时要注意模拟器版本不能太低）
+- Android Support Repository
+- Local Maven repository for Support Libraries
 下载以上SDK内容可能会很慢，耐心等待即可。
 
 3、安装node：
