@@ -1,6 +1,6 @@
 ---
-title: React Native之常用组件介绍（一）
-date: 2017-06-23 23:06:26
+title: React Native之常用组件介绍
+date: 2017-06-30 23:06:26
 tags: [React Native,跨平台,移动端]
 categories: work
 comments: true
@@ -96,12 +96,12 @@ class ToggleImage extends PureComponent {
 }
 ```
 
-4、TextInput
+### 4、TextInput
 
-5、ScrollView
-6、ListView
-7、TouchableHighlight
-8、自定义组件
+### 5、ScrollView
+### 6、ListView
+### 7、TouchableHighlight
+### 8、自定义组件
 
 ## 三、布局相关
 ### 1、FlexBox布局
