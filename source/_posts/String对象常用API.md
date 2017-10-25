@@ -35,6 +35,8 @@ String s = new String(char[] 字符数组名,int index,int count);
 - s1.equalsIgnoreCase(s2)  //忽略大小写 是否相同         【验证码】
 - s1.starWith(str)	   //字符串s1是否以字符串str开头       
 - s1.endWith(str)	   //是否以str 结尾		
+- s1.isEmpty()			//s1是否是空字符串
+- s1.contain(str)		//s1是否包含str
 
 ## 三、String获取功能：
 - s1.length()			//获取字符串对象的长度
@@ -49,6 +51,8 @@ String s = new String(char[] 字符数组名,int index,int count);
 - s1.toCharArray()	//将字符串对象转换为char数组【可用于字符串遍历】
 
 ## 五、String去除左右两边的空格以及分割功能
+- s1.replace(char old,char new)		//字符串中新字符替换存在的旧字符
+- s1.replace(String old,String new)		//字符串中新字符串替换存在的旧字符串
 - s1.trim()  //只能去除左右两边的空格  不能去中间的
 - String s = "11,ss,dd,ff";
   String[] arr = s.split(","); //在遍历arr即可得到分割后的字符串
@@ -104,7 +108,41 @@ s+=chs[i];
   将chs数组反转，索引start end思想  在遍历chs  最后字符串拼接 
 
 
+### 7.4、字符串易错题：
+```
+//1.判断定义为String类型的s1和s2是否相等
+String s1 = "abc";
+String s2 = "abc";
+System.out.println(s1 == s2); // true   字符串存放在方法区的常量池中，地址值相同。只有new出来的存放在堆内存中
+System.out.println(s1.equals(s2));  // true
 
+//2.下面这句话在内存中创建了几个对象?
+String s1 = new String("abc");
+
+//答案：创建两个对象,一个在常量池中,一个在堆内存中
+
+//3.判断定义为String类型的s1和s2是否相等
+String s1 = new String("abc");
+String s2 = "abc";
+System.out.println(s1 == s2);	 // false
+System.out.println(s1.equals(s2)); // true
+// 分别记录的是堆内存和常量池中的地址值
+
+//4.判断定义为String类型的s1和s2是否相等
+String s1 = "a" + "b" + "c";
+String s2 = "abc";
+System.out.println(s1 == s2);	//true,java中有常量优化机制
+System.out.println(s1.equals(s2));	//true
+
+//5.判断定义为String类型的s1和s2是否相等
+String s1 = "ab";
+String s2 = "abc";
+String s3 = s1 + "c";
+System.out.println(s3 == s2);// false
+System.out.println(s3.equals(s2));// true
+```
+
+总结：直接定义的字符串是存放在方法区的常量池中，new出来的是现在堆内存中开辟空间，再指向常量池。所有直接定义的字符串地址值都相同
 
 	
 
