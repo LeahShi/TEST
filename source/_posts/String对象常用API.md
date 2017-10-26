@@ -48,7 +48,10 @@ String s = new String(char[] 字符数组名,int index,int count);
 ## 四、String转换功能
 - s1.toUpperCase()	//全都转换为大写
 - s1.toLowerCase()	//全都转换为小写
-- s1.toCharArray()	//将字符串对象转换为char数组【可用于字符串遍历】
+- s1.toCharArray()	//将字符串对象转换为char数组【可用于字符串遍历】  返回一个字符数组
+- byte[] getByte()	把字符串转换为字节数组  返回一个byte数组
+- valueOf()		将任意类型转换成字符串
+- concat(String str)	字符拼接
 
 ## 五、String去除左右两边的空格以及分割功能
 - s1.replace(char old,char new)		//字符串中新字符替换存在的旧字符
