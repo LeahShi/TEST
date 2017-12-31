@@ -1,5 +1,5 @@
 ---
-title: year-end summary --2017
+title: 别了，2017
 date: 2017-12-31 23:12:46
 tags: 感悟
 categories: year-end summary
