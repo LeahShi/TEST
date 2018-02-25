@@ -126,9 +126,9 @@ JpaSpecificationExecutor（接口） ---  SimpleRepository（实现类）
 ### 2.2、简单总结 
 1、持久化层操作时，都会有一个对象帮助我们操作数据库，从最原始的jdbc的statement对象，c3p0连接池的QueryRunner对象，
 hibernate中的session，spring data jpa中称为entityManagerFactory，mybatis中的sqlSession对象...
-2、通过```<jpa:repositories base-package="持久化层包扫描"></jpa:repositories>```扫描 Repository所在的包全名，就可以找到对应的接口，无需使用注解！
+2、通过 <jpa:repositories base-package="持久化层包扫描"></jpa:repositories> 扫描 Repository所在的包全名，就可以找到对应的接口，无需使用注解！
 3、配置事务管理器，根据不同的数据持久层操作对象，事务管理器对象也不同：
-Hibernate中是HibernateTransactionManager，spring data jpa中是JpaTransactionManager...
+Hibernate中是HibernateTransactionManager，spring data jpa中是JpaTransactionManager
 
 ## 三、命名查询和自定义sql
 上文提及spring data jpa非常强大，可以无需实现类无需sql语句，只要方法的命名符合规范，就可以实现相应的功能。
@@ -158,8 +158,8 @@ User findByUsernameAndPassword(对应参数);
 @Query(value="update TakeTime set status=?2 where id=?1",nativeQuery=false)
 @Modifying
 public void batchUpdateDel(Integer id,Integer status);
-	
 ```
+
 使用@Query注解在对应的方法上面，value属性后面值为响应的SQL/HQL语句，spring data jpa默认采用的和hibernate一样HQL语句，
 当参数列表的顺序和HQL中所需参数顺序不同时，可以在？后面加入数字来对应相应的参数！
 nativeQuery 属性值为一个布尔类型，默认值为false,当为true是，value后面的值应该为SQL语句
@@ -169,6 +169,7 @@ nativeQuery 属性值为一个布尔类型，默认值为false,当为true是，v
 
 ## 四、多表查询，分页条件查询，排序查询
 使用Spring data jpa使得分页条件查询（多表）变的很容易，（采用的是Criteria语句查询）：
+
 ```
 @Action(value = "findAllOrderByPage", results = { @Result(name = "success", type = "json") })
 public String findAllOrderByPage() {
