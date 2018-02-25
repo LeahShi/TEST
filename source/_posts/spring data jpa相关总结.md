@@ -182,14 +182,14 @@ public String findAllOrderByPage() {
 		public Predicate toPredicate(Root<Order> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
 			// 定义List集合容纳条件对象
 			List<Predicate> list = new ArrayList<Predicate>();
-			// 1、Courier表中 单表操作 以下是比较字段的值而不是名称！！
+			// 1、Order表中 单表操作 以下是比较字段的值而不是名称！！
 			// 判断工号是否非空 模糊查询
 			if (StringUtils.isNotBlank(model.getOrderNum())) {
 				Predicate p1 = cb.like(root.get("orderNum").as(String.class), "%" + model.getOrderNum() + "%");
 				list.add(p1);
 			}
 
-			// 判断单位 模糊查询，%号不能漏掉
+			// 判断商品名称 模糊查询，%号不能漏掉
 			if (StringUtils.isNotBlank(model.getName())) {
 				Predicate p2 = cb.like(root.get("name").as(String.class), "%" + model.getName() + "%");
 				list.add(p2);
@@ -201,7 +201,7 @@ public String findAllOrderByPage() {
 				list.add(p3);
 			}
 
-			// 2、Courier和Standard多表操作 此处的standard必须为Courier表中字段名称
+			// 2、Order和Standard多表操作 此处的standard必须为Order表中字段名称
 			// 返回的是Standard表中的root，不写连接方式默认是内连接！！
 			Join<Object, Object> standardRoot = root.join("standard", JoinType.INNER);
 			if (model.getStandard() != null && StringUtils.isNotBlank(model.getStandard().getName())) {
@@ -214,8 +214,8 @@ public String findAllOrderByPage() {
 		}
 	};
 	
-	// 在service中直接调用 courierRepository中findAll(specification, pageable); 方法即可
-	Page<Courier> pageData = courierService.findAllOrderByPage(specification, pageable);
+	// 在service中直接调用 OrderRepository中findAll(specification, pageable); 方法即可
+	Page<Courier> pageData = orderService.findAllOrderByPage(specification, pageable);
 	
 	// 压入值栈
 	Map<String, Object> result = new HashMap<String, Object>();
