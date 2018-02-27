@@ -61,7 +61,7 @@ categories: work
 	<!-- 配置spring 扫描路径 @Repository @Service @Controller -->
 	<context:component-scan base-package="com.leahshi" />
 
-	<!-- 配置elasticSearch连接  -->
+	<!-- 配置elasticSearch连接 此处可以配置集群搜索服务器 -->
 	<elasticsearch:transport-client id="client" cluster-nodes="localhost:9300" />
 	
 	<!-- 配置elasticSearch模板，注意id的值只能是elasticsearchTemplate  -->
