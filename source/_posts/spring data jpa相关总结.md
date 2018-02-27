@@ -1,6 +1,6 @@
 ---
 title: spring data jpa相关总结
-date: 2017-09-15 10:51:23
+date: 2017-03-15 10:51:23
 tags: [Java,数据持久层]
 categories: work
 ---
@@ -231,13 +231,42 @@ public String findAllOrderByPage() {
 以上主要有Specification和Predicate两个对象
 
 ## 五、常见问题：
-spring data jpa延迟加载问题：
+### 5.1、spring data jpa延迟加载问题：
 ```
 Caused by: org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.leahshi.domain.XXX, could not initialize proxy - no Session
 ```
 解决方案：
 1、在实体类上对应字段的get方法上面加上@JSON(serialize = false)注解，返回数据时不返回该字段
-2、在web.xml中配置OpenSessionInViewFilter将session关闭放在web层，并且在service层要加上事务控制@Tractional
+2、在web.xml中配置OpenSessionInViewFilter将session关闭放在web层，并且在service层要加上事务控制@
+
+### 5.2、分页查询中返回实体对象不是标准POJO类
+查看源码可以看到Page<T>接口里只有getter方法，没有setter方法，不是一个标准的POJO类，在使用webservice传输数据时，直接回报错。。
+需要手动封装PageBean对象，提供getter/setter方法。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
