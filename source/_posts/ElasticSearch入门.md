@@ -1,6 +1,6 @@
 ---
 title: ElasticSearch入门
-date: 2017-05-15 10:51:23
+date: 2017-07-15 10:51:23
 tags: [Java,全文检索]
 categories: work
 ---
@@ -83,10 +83,10 @@ public void test01() throws Exception {
 	/**
 	 *  搜索数据:	
 	 *		matchAllQuery ：查询所有匹配条件的结果
-	 * 		queryStringQuery : 基于分词查询 
+	 * 		queryStringQuery : 基于分词查询 ，可以根据多个词条进行查询，并对其取交集或者并集 
 	 * 		fuzzyQuery : 相似度查询
 	 * 		BoolQuery ： 组合多个查询条件 
-	 *		wildcardQuery ： 模糊查询
+	 *		wildcardQuery ： 模糊查询，在左右两侧加上 * 而不是 % ！！！
 	 * 		termQuery() 和  wildcardQuery 类似基于词条查询  并且是基于默认词条查询 一个字一个字匹配
 	 */
 	 
@@ -94,7 +94,7 @@ public void test01() throws Exception {
 	 
 	// SearchResponse response = client.prepareSearch("idx01").setTypes("article").setQuery(QueryBuilders.queryStringQuery("搜索")).get();
 
-	// SearchResponse response = client.prepareSearch("idx01").setTypes("article").setQuery(QueryBuilders.wildcardQuery("content", "搜索")).get();
+	// SearchResponse response = client.prepareSearch("idx01").setTypes("article").setQuery(QueryBuilders.wildcardQuery("content", "*搜索*")).get();
 
 	// SearchResponse response = client.prepareSearch("idx01").setTypes("article").setQuery(QueryBuilders.termQuery("content", "搜索")).get();
 

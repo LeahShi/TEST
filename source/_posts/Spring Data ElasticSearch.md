@@ -1,17 +1,17 @@
 ---
 title: Spring Data ElasticSearch快速入门
-date: 2017-05-18 10:51:23
+date: 2017-07-18 10:51:23
 tags: [Java,全文检索]
 categories: work
 ---
 
-接上篇，ElasticSearch通常和Spring ES整合起来使用，前文曾经介绍过Spring data 统一持久层框架，就包括Spring data elasticsearch,Spring data redis等非关系型数据库。
-使用与Spring整合，很多东西都放在Spring的配置文件中，会是全文检索变得不那么复杂。所以此篇记录下Spring Data ElasticSearch 的相关用法。
+接上篇，ElasticSearch通常和Spring Data ES整合起来使用，前文曾经介绍过Spring data 统一持久层框架，就包括Spring data elasticsearch,Spring data redis等非关系型数据库。
+使用与Spring整合，很多东西都放在Spring的配置文件中，会使全文检索变得不那么复杂。所以此篇记录下Spring Data ElasticSearch 的相关用法。
  
 <!-- more-->
   
 ## 入门程序：
-### 1、导入jar包：（题主使用的mave）
+### 1、导入jar包：（题主使用的maven）
 ```
 <dependency>
 	<groupId>org.elasticsearch</groupId>
@@ -213,41 +213,6 @@ public class ElasticSearch_spring_test {
 }
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
