@@ -114,15 +114,10 @@ Session Management（会话管理）、Cryptography（安全数据加密）、 W
 	<!-- 配置安全管理器 -->
 	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
 		<property name="realm" ref="uhoemRealm" />
-		<!-- 将 shiro 的缓存管理器，注入到安全管理器中 -->
-		<property name="cacheManager" ref="shiroCacheManager" />
 	</bean>
 	
 	<!-- 配置realm -->
-	<bean id="uhoemRealm" class="com.leahshi.realm.uhoemRealm">
-		<!-- 此处配置ehcache配置文件中的name "authorizationCacheName" 权限认证 而不是 身份认证 -->
-		<property name="authorizationCacheName" value="uhoem"></property>
-	</bean>
+	<bean id="uhoemRealm" class="com.leahshi.realm.uhoemRealm"></bean>
 
 	<!-- 生命周期后处理器 -->
 	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"></bean> 
