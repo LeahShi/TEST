@@ -38,6 +38,7 @@ categories: work
 
 ### 1.2、Jquery OCUpload
 ocupload插件已经将一切封装好了，我们只需要引入jquery.ocupload-x.x.x.js，对页面中的一个按钮绑定事件，配置下列属性，即可实现一键上传操作：
+
 ```
 $(function () {  
 	$("#uploadfile").upload({  
@@ -70,7 +71,7 @@ $(function () {
 		}  
 	});  
 });  
-```  
+```
   
 ### 1.3、Struts提供的文件上传功能
 
@@ -79,6 +80,7 @@ Apache POI是Apache组织的开源的函式库，提供API给Java程序对 Offic
 由于Excel在07年之前的后缀名为.xls，07年之后后缀名为.xlsx，所以解析两者的对象也不同，分别为HSSF和XSSF
 ### 2.1、入门
 1、导入POI maven坐标
+
 ```
 <dependency>
 	<groupId>org.apache.poi</groupId>
@@ -98,6 +100,7 @@ Apache POI是Apache组织的开源的函式库，提供API给Java程序对 Offic
 	<version>3.9</version>
 </dependency>
 ```
+
 2、POI EXCEL文档结构类：
 - HSSFWorkbook  文档工作簿
 - HSSFSheet 	文档的每个Sheet 
@@ -111,6 +114,7 @@ Apache POI是Apache组织的开源的函式库，提供API给Java程序对 Offic
 
 4、工具类：
 网上相关工具类有很多，下面这个两种格式的都可以上传
+
 ```
 package com.leahshi.utils;
 
@@ -263,6 +267,7 @@ public class POIUtils {
 
 ## 三、使用PinYin4J生成城市简码
 因为导入省市级数据后，需要生成城市简码，比如省市区首字母，城市拼音等，需要使用到PinYin4J这个工具。
+
 ```
 package com.leahshi.utils;
 
@@ -577,6 +582,8 @@ public class PinYin4jUtils {
 }
  
 ```
+
+
 关于解决多音字问题，在找了很多资料，看到http://blog.csdn.net/lkx94/article/details/53860253 这篇博文写的不错~   
   
   

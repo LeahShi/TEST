@@ -13,10 +13,10 @@ ElasticSearch采用Restful风格，所以都是采用json格式数据传输
 
 ## 一、下载及安装
 ElasticSearch是基于java的开发的，所以在安装jdk配置配置JAVA_HOME后，安装很简单，在[官网]( https://www.elastic.co/products/elasticsearch)下载完成后，
-直接解压，双击bin/elasticsearch.bat 启动服务，访问http://localhost:9200，会在浏览器中打印一段关于ES的json信息，表示已经安装成功。
+直接解压，双击bin/elasticsearch.bat 启动服务，访问```http://localhost:9200```，会在浏览器中打印一段关于ES的json信息，表示已经安装成功。
  
 安装可视化化工具ES head： 
-在elasticsearch-x.x.x/bin/plugin.bat 目录下执行**install mobz/elasticsearch-head**命令，安装完成后，重启服务，访问http://localhost:9200/_plugin/head/完成安装
+在elasticsearch-x.x.x/bin/plugin.bat 目录下执行**install mobz/elasticsearch-head**命令，安装完成后，重启服务，访问```http://localhost:9200/_plugin/head/```完成安装
 
 ElasticSearch服务器默认的端口是9300，在浏览器中的端口是9200
 
@@ -71,9 +71,12 @@ public void test() throws Exception {
 	client.close(); 
 	
 }
+
 ``` 
 
+
 ### 2、基于各种搜索对象搜索文档
+
 ```
 @Test
 public void test01() throws Exception {
@@ -126,6 +129,7 @@ public void test01() throws Exception {
 第四步：配置 config/elasticsearch.yml，在最后加上 【index.analysis.analyzer.ik.type: "ik"】
 
 ### 2、ik分词器集成ElasticSearch
+
 ```
 @Test
 public void test02() throws Exception {
@@ -246,6 +250,8 @@ public void test04() throws Exception{
 	client.close();
 }
 ```
+
+
 在控制台中就返回了20条数据，因为没有排序，所以返回的id不是连续的
 在很多全文搜索服务中，会对关键字进行高亮显示，原理很简单，就是在搜索关键在的周围定义一个标签，并对标签定义样式
 
