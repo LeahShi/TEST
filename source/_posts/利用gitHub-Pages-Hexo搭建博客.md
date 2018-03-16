@@ -123,6 +123,9 @@ hexo s -debug
 ```
 hexo g -d
 ```
+
+注意：在部署过程中，在报了
+
 [更多Hexo主题](https://hexo.io/themes/)
 
 ### 发布内容
