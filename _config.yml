@@ -77,6 +77,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:LeahShi/LeahShi.github.io.git
+  repository: git@github.com:ShiLu/ShiLu.github.io.git
   branch: master
 
