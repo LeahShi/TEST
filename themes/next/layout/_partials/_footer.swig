@@ -9,6 +9,18 @@
   <span class="author" itemprop="copyrightHolder">{{ config.author }}</span>
 </div>
 
+{% if theme.copyright %}
+<div class="powered-by">
+  {{ __('footer.powered', '<a class="theme-link" href="https://hexo.io">Hexo</a>') }}
+</div>
+
+<div class="theme-info powered-by">
+  {{ __('footer.theme') }} -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.{{ theme.scheme }}
+  </a>
+</div>
+{% endif %}
 
 <span id="busuanzi_container_site_pv">
   Total visited  <span id="busuanzi_value_site_uv"></span>  times
