@@ -162,23 +162,6 @@ public Page<Standard> findAllStandardByPage(Pageable pageable) {
  
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
 
 
 
