@@ -6,7 +6,7 @@ categories: work
 comments: true
 ---
 
-最近向学习点java语言，所以选用了比较轻量级的编辑器  EditPlus。
+
 
 <!-- more -->
 
