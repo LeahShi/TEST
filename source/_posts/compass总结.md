@@ -1,11 +1,11 @@
 ---
 title: compass总结
-date: 2016-04-09 11:25:34
+date: 2015-11-30 11:08:01
 tags: [Compass,Sass,CSS]
 categories: work
 ---
 
-[前面](https://leahshi.github.io/2017/02/15/sass%E6%80%BB%E7%BB%93/)已提及sass是css的预处理器开发工具，而compass相当于sass的工具库。想想jQuery与javascript的关系，就明了了。
+[前面](https://leahshi.github.io/2015/11/20/sass%E6%80%BB%E7%BB%93/)已提及sass是css的预处理器开发工具，而compass相当于sass的工具库。想想jQuery与javascript的关系，就明了了。
 用compass我们可以很轻松的书写css3属性、制作精灵图等，compass里也设定了很多混合器、模块和函数等供我们调用。
 [compass官网](http://compass-style.org/)中提到Compass is an open-source CSS Authoring Framework。总而言之，使用compass会让css更加精简和方便。
 

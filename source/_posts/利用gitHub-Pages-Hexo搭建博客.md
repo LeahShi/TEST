@@ -1,6 +1,6 @@
 ---
 title: GitHub Pages + Hexo搭建博客
-date: 2016-02-15 2:02:22
+date: 2015-10-15 11:08:01
 tags: [GitHub, Hexo]
 categories: work
 comments: true
