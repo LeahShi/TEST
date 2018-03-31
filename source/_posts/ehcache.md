@@ -1,6 +1,6 @@
 ---
-title: ehcache
-date: 2017-09-21 20:51:23
+title: Ehcache
+date: 2016-11-15 13:50:37
 tags: [Java,缓存]
 categories: work
 ---

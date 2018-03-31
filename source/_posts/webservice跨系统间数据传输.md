@@ -1,6 +1,6 @@
 ---
 title: webservice跨系统间数据传输
-date: 2018-02-14 19:30:23
+date: 2016-10-30 13:50:37
 tags: [Java,webservice]
 categories: work
 ---

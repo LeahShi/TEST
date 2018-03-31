@@ -1,6 +1,6 @@
 ---
 title: spring data jpa相关总结
-date: 2017-03-15 10:51:23
+date: 2017-01-05 10:51:23
 tags: [Java,数据持久层]
 categories: work
 ---
