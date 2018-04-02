@@ -131,6 +131,7 @@ Session Management（会话管理）、Cryptography（安全数据加密）、 W
 
 
 4、表现层UserAction，创建登录方法
+
 ```
 @Action(value = "userLogin", results = { @Result(name = "success", type = "redirect", location = "index.html"),
 			@Result(name = "login", type = "redirect", location = "login.html") })
@@ -154,6 +155,7 @@ public String userLogin() {
 以上调用subject的login方法后，shiro底层会操作核心对象SecurityManager安全管理器，在spring配置文件中为SecurityManager注意了一个Realm对象，所以会紧接着调用自动一的Realm对象
 
 5、创建Reaml对象
+
 ```
 package com.leahshi.bos.realm;
 
