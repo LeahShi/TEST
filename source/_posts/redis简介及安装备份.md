@@ -1,11 +1,11 @@
 ---
-title: redis安装备份
+title: redis简介及安装备份
 date: 2018-01-10 19:48:32
 tags: [Redis]
 categories: work
 ---
 
-Redis和Memcached、MongoDB类似，也是分布式缓存服务器，因为是缓存服务器，占据内存，所以比关系型数据库访问的速度快很多。同时对于高并发处理，redis远大于tomcat的承受能力，redis大概最大能承受50万的并发量，而tomcat只能达到几百，所以我们通常会将一些经常访问的资源放到redis中缓存，减轻服务器和数据库的压力。之后会持续记录redis相关操作...此篇主要记录redis安装步骤
+Redis和Memcached、MongoDB类似，也是分布式缓存服务器，因为是缓存服务器，占据内存，所以比关系型数据库访问的速度快很多。同时对于高并发处理，redis远大于tomcat的承受能力，redis大概最大能承受50万的并发量，而tomcat只能达到几百，同时redis是单线程的，所以我们通常会将一些经常访问的资源放到redis中缓存，减轻服务器和数据库的压力。之后会持续记录redis相关操作...此篇主要记录redis安装步骤
 
 <!-- more-->
  
