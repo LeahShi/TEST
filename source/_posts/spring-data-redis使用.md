@@ -75,7 +75,7 @@ categories: work
     <!-- 扫描属性文件-->
     <context:property-placeholder location="classpath*:config/*.properties"/>
 
-    <!-- redis 相关配置 -->
+    <!-- jedis连接池配置 -->
     <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
         <!-- 最大空闲数-->
         <property name="maxIdle" value="${redis.maxIdle}"/>
@@ -313,7 +313,7 @@ public class StoreSet {
 - List数据类型很特殊，可以模拟栈（左压栈）和队列（右压栈）两种数据类型
 - Hash类型，可以向HashSet集合那样获取所有的key和value，根据key来获取value
 - Set类型，获取所有的元素调用的是members()方法..
-
+- 设置失效时间，五种数据类型都可以设置失效时间，使用redisTemplate.boundXxxOps().expire(设置失效时间,设置失效单位);
 
 
 
