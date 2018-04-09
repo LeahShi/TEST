@@ -5,7 +5,7 @@ tags: [Java]
 categories: work
 ---
 
-这几天开始学习Java，整个人有点分裂，因为JavaScript的一些知识先入为主，两种语言有相似的地方，也有截然不同的东西。
+因为JavaScript的一些知识先入为主，两种语言有相似的地方，也有截然不同的东西。
 Java是强类型语言，JavaScript是弱类型语言,前者数据类型分为：基本数据类型（四类八种）、和引用数据类型（类、接口、数组）。
 后者分为简单数据类型（也称为基本数据类型）：Boolean、Number、String、Null、Undefined、和复杂数据类型。
 今天介绍的String字符串，在JS中将String划归为简单数据类型，在Java中，String是一个类，属于引用数据类型。

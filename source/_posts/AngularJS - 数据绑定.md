@@ -1,7 +1,7 @@
 ---
 title: AngularJS - 数据绑定 
 date: 2016-09-25 22:53:20
-tags: [AngularJS,JS]
+tags: [前端,AngularJS]
 categories: work
 ---
 
