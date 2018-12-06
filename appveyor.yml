@@ -2,7 +2,7 @@ clone_depth: 5
 
 environment:
   access_token:
-    secure: fH7W6JucSbncYVyaM3jTAPdXKhO9PDX9cRU2XYT2FAaBlE03iCj4EqcWuygjiqPW
+    secure: HwSIytChKMFE96u1kZQM+FatSPrW9YOyAIYWP+IQddDn69uvew+Up0xHA3Xhjg+B
 
 install:
   - node --version
@@ -10,6 +10,7 @@ install:
   - npm install
   - npm install hexo-cli -g
 
+build: off
 build_script:
   - hexo generate
 
