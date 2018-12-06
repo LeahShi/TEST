@@ -80,3 +80,8 @@ deploy:
   repository: git@github.com:LeahShi/LeahShi.github.io.git
   branch: master
 
+# hexo-admin authentification
+admin:
+  username: LeahShi
+  password_hash: $2a$10$Ul/bfZ1CCp.R5P4OgOgIGOf.fflhj1xbbDh2auaa39D/r9euyfM/S
+  secret: donteatbrakefirst 
