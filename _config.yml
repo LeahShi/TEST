@@ -4,8 +4,8 @@
 
 # Site
 title: Leah'Blog
-subtitle: 越努力，越幸运
-description: 越努力，越幸运
+subtitle: waiting
+description: your life belongs to nobody else.
 author: Leah Shi
 language: zh-EN
 timezone:
@@ -14,7 +14,8 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://leahshi.github.io
 root: /
-permalink: :year/:month/:day/:title/
+# permalink: :year/:month/:day/:title/
+permalink: post/:title/
 permalink_defaults:
 
 # Directory
@@ -80,3 +81,9 @@ deploy:
   repository: git@github.com:LeahShi/LeahShi.github.io.git
   branch: master
 
+
+# hexo-admin authentification
+admin:
+  username: leahshi
+  password_hash: $2a$10$tvfYKLPqCW9iofsJyz3GAeSnOsGOfO0HDWrT1PtSS9f3laT/.N9Km
+  secret: Iwantbestrong
