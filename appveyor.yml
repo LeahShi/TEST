@@ -10,7 +10,10 @@ install:
   - npm install
   - npm audit fix
   - npm install hexo-cli -g
+  - npm install minimatch@"3.0.2" 
+  - npm update -d
   - npm install --save hexo-admin
+  - npm audit fix
 
 
 build: off
