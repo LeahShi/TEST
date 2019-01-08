@@ -14,7 +14,7 @@ install:
 
 build: off
 build_script:
-  - hexo generate --deploy
+  - hexo generate
 
 artifacts:
   - path: public
