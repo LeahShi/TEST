@@ -8,14 +8,12 @@ install:
   - node --version
   - npm --version
   - npm install
-  - npm install hexo-cli -g
-  - npm update
   - npm install --save hexo-admin
+  - npm audit fix
 
 build: off
 build_script:
   - hexo generate
-  - hexo s
 
 artifacts:
   - path: public
