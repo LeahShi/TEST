@@ -10,13 +10,13 @@ install:
   - npm install
   - npm install hexo-cli -g
   - npm update
-  - npm install -g npm-check
-  - npm install -g npm-upgrade
-
+  - npm install --save hexo-admin
 
 build: off
 build_script:
-  - hexo g -d
+  - hexo generate
+  - hexo s
+
 artifacts:
   - path: public
 
