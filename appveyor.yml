@@ -8,8 +8,9 @@ install:
   - node --version
   - npm --version
   - npm install
-  - npm install --save hexo-admin
   - npm audit fix
+  - npm install --save hexo-admin
+
 
 build: off
 build_script:
