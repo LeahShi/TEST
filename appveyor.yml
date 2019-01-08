@@ -9,11 +9,14 @@ install:
   - npm --version
   - npm install
   - npm install hexo-cli -g
+  - npm update
+  - npm install -g npm-check
+  - npm install -g npm-upgrade
+
 
 build: off
 build_script:
-  - hexo generate
-
+  - hexo g -d
 artifacts:
   - path: public
 
